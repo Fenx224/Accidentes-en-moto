@@ -31,3 +31,17 @@ CREATE TABLE `cascos`(
     PRIMARY KEY (`cascoID`),
     UNIQUE KEY `cascoID`(`cascoID`)
 ) ENGINE=InnoDB;
+
+CREATE TABLE `accidentes`(
+	`accidenteID` INT NOT NULL AUTO_INCREMENT,
+    `fecha` DATE,
+    `lugar` VARCHAR(50),
+    `descripcion` LONGTEXT NOT NULL,
+    `causa` LONGTEXT NOT NULL,
+    `lesionado` VARCHAR(150) NOT NULL,
+    `uso_caso` CHAR(4) NOT NULL,
+    `nivel_gravedad` VARCHAR(30),
+    `imagen_evidencia` BLOB,
+    PRIMARY KEY (`accidenteID`),
+    UNIQUE KEY `accidenteID`(`accidenteID`)
+) ENGINE=InnoDB;
