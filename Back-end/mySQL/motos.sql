@@ -11,6 +11,7 @@ CREATE TABLE `users` (
     `lastName` VARCHAR(35) NOT NULL,
     `mail` VARCHAR(50) NOT NULL,
     `telephone` VARCHAR(14) NOT NULL,
+    `isAdmin` boolean,
     PRIMARY KEY (`userID`),
     UNIQUE KEY `userID`(`userID`),
     UNIQUE KEY `userName`(`userName`),
