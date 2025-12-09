@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accidentes</title>
+    <link rel="stylesheet" href="/estilos/modalStyle.css">
+</head>
+<body>
+
+
+    <!--Inicio de la ventana modal-->
+    <div class = "modal">
+        <div class = "contenidoModal">
+            <button id="cerrar">&times;</button>
+            <h2>Agregar accidente</h2>
+            <div class = "formularioCrear">
+                <form action="" method="post">
+                    <div class = "userModal">
+                        <input class = "userNewInput" id = "userNew" type="date" name = "userNew" required>
+                        <label for="userNew">Fecha</label>
+                        <span class = "newUserError">Usuario ya existente</span>
+                    </div>
+                    <div class = "userModal">
+                        <input class = "userNewInput" id = "passwordNew" type="text" name = "passwordNew" required>
+                        <label for="passwordNew">Lugar</label>
+                    </div>
+                    <div class = "userModal">
+                        <input class = "userNewInput" id = "name" type="text" name = "name" required>
+                        <label for="name">Descripción</label>
+                    </div>
+                    <div class = "userModal">
+                        <input class = "userNewInput" id = "lastNameNew" type="text" name = "lastNameNew" required>
+                        <label for="lastNameNew">Causa</label>
+                    </div>
+                    <div class = "userModal">
+                        <input class = "userNewInput" id = "telephone" type="text" name = "telephone" required>
+                        <label for="telephone">Lesionados</label>
+                    </div>
+                    <div class = "userModal">
+                        <input class = "userNewInput" id = "emailNew" type="text" name = "emailNew" required>
+                        <label for="emailNew">Uso casco</label>
+                    </div>
+                    <div class = "userModal">
+                        <input class = "userNewInput" id = "emailNew" type="text" name = "emailNew" required>
+                        <label for="emailNew">Nivel de gravedad</label>
+                    </div>
+                    <div class = "userModal">
+                        <input class = "userNewInput" id = "emailNew" type="text" name = "emailNew">
+                        <label for="emailNew">Imagen de evidencia</label>
+                    </div>
+                    <div class = "CrearNew">
+                        <span class = "crearCuentaError">Error al crear la cuenta</span>
+                        <button id = "btnCreateNew" type="submit">Crear cuenta</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--Fin de la ventana modal-->
+    
+    <button id = "btnAgregar">Agregar</button>
+    <script src="/scripts/script_modal.js"></script>
+</body>
+</html>
