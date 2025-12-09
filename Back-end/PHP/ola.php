@@ -1,16 +1,5 @@
 <?php
-// Configura datos de conexión
-$host = "localhost";
-$usuario = "root";
-$clave = "";
-$base = "accidentes_en_moto";
-
-// Crear conexión
-$conexion = new mysqli($host, $usuario, $clave, $base);
-
-if ($conexion->connect_error) {
-    die("Error de conexión: " . $conexion->connect_error);
-}
+include 'db.php';
 
 // DEFINICIÓN de la función (debe aceptar la conexión como argumento)
 function Consultar($db_connection) {

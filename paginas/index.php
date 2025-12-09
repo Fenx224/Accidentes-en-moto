@@ -1,11 +1,5 @@
 <?php
-// =========================================================
-// 1. INCLUSIÓN Y LÓGICA DE PHP
-// =========================================================
-
-// Incluye el archivo que contiene la conexión ($conexion) y la función Consultar
-// Asegúrate de que 'ola.php' esté en la ruta correcta.
-include 'ola.php'; 
+include 'db.php'; 
 
 // Variable para guardar la salida de la consulta (la tabla HTML)
 $output_consulta = ''; 
