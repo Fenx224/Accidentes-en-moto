@@ -1,0 +1,401 @@
+body{
+    background-color: rgb(28, 31, 38);
+}
+
+#estructura{
+    display: flex;
+    flex-direction: row;
+}
+
+#cuerpo{
+    background-color: rgb(22, 24, 28);
+    color: white;
+    margin: 40px 20px 0 20px;
+    margin: 2px solid black;
+    height: 600px;
+    width: 500px;
+    border-radius: 15px;
+}
+
+#liniciose{
+    padding: 20px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+#formulario{
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+
+#inuser-group {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 0 0 7px 0;
+    margin: 15px 0 15px 0;
+}
+
+#inuser{
+    background-color: rgb(22, 24, 28);
+    border: 2px solid rgba(164, 163, 182, 0.088);
+    box-shadow: 5px 5px 0px 0px rgba(164, 163, 182, 0.088);
+    border-radius: 5px;
+    color: white;
+    height: 35px;
+    width: 300px;
+    margin: 12px 0px 12px 0px;
+    display: block;
+}
+
+#inuser:focus{
+    border: 2px solid white;
+}
+
+#inuser:hover{
+    border: 2px solid white;
+}
+
+#inuser-group label{
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    color: rgba(128, 128, 128, 0.83);
+    transition: all 0.2s ease-out;
+    pointer-events: none;
+}
+
+#inuser-group input:focus ~ label{
+    top: -10px;
+    left: 5px;
+    font-size: 12px;
+    color: white;
+    background-color: rgb(22, 24, 28);
+    padding: 0 5px;
+}
+
+#inpass-group {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 0 0 15px 0;
+    margin: 15px 0 15px 0;
+}
+
+#inpass{
+    background-color: rgb(22, 24, 28);
+    border: 2px solid rgba(164, 163, 182, 0.088);
+    box-shadow: 5px 5px 0px 0px rgba(164, 163, 182, 0.088);
+    border-radius: 5px;
+    color: white;
+    height: 35px;
+    width: 300px;
+    margin: 12px 0px 12px 0px;
+    display: block;
+}
+
+#inpass:focus{
+    border: 2px solid white;
+}
+
+#inpass:hover{
+    border: 2px solid white;
+}
+
+#inpass-group label{
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    color: rgba(128, 128, 128, 0.83);
+    transition: all 0.2s ease-out;
+    pointer-events: none;
+}
+
+#inpass-group input:focus ~ label{
+    top: -10px;
+    left: 5px;
+    font-size: 12px;
+    color: white;
+    background-color: rgb(22, 24, 28);
+    padding: 0 5px;
+}
+
+#inuser-group input:valid ~ label{
+    top: -10px;
+    left: 5px;
+    font-size: 12px;
+    color: white;
+    background-color: rgb(22, 24, 28);
+    padding: 0 5px;
+}
+
+#inpass-group input:valid ~ label{
+    top: -10px;
+    left: 5px;
+    font-size: 12px;
+    color: white;
+    background-color: rgb(22, 24, 28);
+    padding: 0 5px;
+}
+
+.loginError {
+    display: none;
+    color: red;
+    font-size: 14px;
+}
+
+#botonesIniciar{
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+
+#botonesCrear{
+    text-align: center;
+}
+
+#btnIniciar{
+    text-align: center;
+    color: black;
+    border-radius: 13px;
+    box-shadow: 0 0 0 0;
+    border: 2px solid rgba(164, 163, 182, 0.088);
+    background-color: white;
+    height: 30px;
+    width: 275px;
+}
+
+#btnIniciar:hover{
+    background-color: rgba(255, 255, 255, 0.858);
+    cursor: pointer;
+}
+
+#btnIniciar:active{
+    transform: scale(0.95);
+}
+
+#btnCrear{
+    text-align: center;
+    color: black;
+    border-radius: 13px;
+    box-shadow: 0 0 0 0;
+    border: 2px solid #a4a3b616;
+    background-color: white;
+    height: 30px;
+    width: 275px;
+}
+
+#btnCrear:hover{
+    background-color: rgba(255, 255, 255, 0.858);
+    cursor: pointer;
+}
+
+#btnCrear:active{
+    transform: scale(0.95);
+}
+
+#cerrar{
+    color: white;
+    background-color: rgb(22, 24, 28);
+    box-shadow: 0 0 0 0;
+    border: 2px solid rgb(22, 24, 28);
+    float: right;
+    user-select: none;
+    font-size: 25px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+#cerrar:hover{
+    background-color: rgba(128, 128, 128, 0.83);
+    cursor: pointer;
+}
+
+#cerrar:active{
+    background-color: rgba(128, 128, 128, 0.83);
+    transform: scale(0.95);
+}
+
+.CrearNew{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#btnCreateNew{
+    text-align: center;
+    color: black;
+    border-radius: 13px;
+    box-shadow: 0 0 0 0;
+    border: 2px solid #a4a3b616;
+    background-color: white;
+    height: 30px;
+    width: 275px;
+}
+
+#btnCreateNew:hover{
+    background-color: rgba(255, 255, 255, 0.858);
+    cursor: pointer;
+}
+
+#btnCreateNew:active{
+    transform: scale(0.95);
+}
+
+.spaceO{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 20px 0;
+    margin: 10px 0 10px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.lineaSep{
+    width: 125px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: rgba(128, 128, 128, 0.831);
+}
+
+.lblspaceO{
+    padding: 0 3px 0 3px;
+}
+
+
+#mensaje{
+    margin: 20px 0 20px 0;
+    padding: 10px 10px 10px 20px;
+    width: 75%;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    color: white;
+    text-wrap: inherit;
+    text-shadow: 6px 2px 2px rgba(0,0,0,0.73);
+    background: linear-gradient(45deg,rgba(28, 31, 38, 1) 77%, rgba(128, 128, 128, 1) 100%);
+}
+
+#mensaje p{
+    text-shadow: 3px 3px 5px black;
+}
+
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.contenidoModal {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: auto;
+    background: rgb(22, 24, 28);
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    color: white;
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+.contenidoModal input[type="text"]{
+    background-color: rgb(22, 24, 28);
+    border: 2px solid rgba(164, 163, 182, 0.088);
+    box-shadow: 5px 5px 0px 0px rgba(164, 163, 182, 0.088);
+    border-radius: 5px;
+    color: white;
+    height: 35px;
+    width: 300px;
+    margin: 12px 0px 12px 0px;
+    display: block;
+}
+
+.contenidoModal h2{
+    padding: 5px 10px;
+}
+
+.formularioCrear{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.userModal {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 0 0 7px 0;
+    margin: 15px 0 15px 0;
+}
+
+.userModal label{
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    color: rgba(128, 128, 128, 0.83);
+    transition: all 0.2s ease-out;
+    pointer-events: none;
+}
+
+.userNewInput{
+    padding: 0px 10px;
+}
+
+.userNewInput:focus{
+    border: 2px solid white;
+}
+
+.userNewInput:hover{
+    border: 2px solid white;
+}
+
+.userModal input:focus ~ label{
+    top: -10px;
+    left: 5px;
+    font-size: 12px;
+    color: white;
+    background-color: rgb(22, 24, 28);
+    padding: 0 5px;
+}
+
+.userModal input:valid ~ label{
+    top: -10px;
+    left: 5px;
+    font-size: 12px;
+    color: white;
+    background-color: rgb(22, 24, 28);
+    padding: 0 5px;
+}
+
+.newUserError {
+    display: none;
+    color: red;
+    font-size: 14px;
+}
+
+.crearCuentaError {
+    display: none;
+    color: red;
+    font-size: 14px;
+}
