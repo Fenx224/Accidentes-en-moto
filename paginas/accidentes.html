@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Accidentes</title>
-    <link rel="stylesheet" href="/estilos/modalStyle.css">
+    <link rel="stylesheet" href="/estilos/modalAddStyle.css">
+    <link rel="stylesheet" href="/estilos/accidentemodal.css">
 </head>
 <body>
 
@@ -13,44 +14,43 @@
         <div class = "contenidoModal">
             <button id="cerrar">&times;</button>
             <h2>Agregar accidente</h2>
-            <div class = "formularioCrear">
-                <form action="" method="post">
-                    <div class = "userModal">
-                        <input class = "userNewInput" id = "userNew" type="date" name = "userNew" required>
-                        <label for="userNew">Fecha</label>
-                        <span class = "newUserError">Usuario ya existente</span>
+            <div class = "formularioModal">
+                <form action="" method="post" class = "formularioGrid">
+                    <div class = "addModalAccident">
+                        <input class = "modalInput" id = "accidentDate" type="date" name = "accidentDate" required>
+                        <label for="accidentDate">Fecha</label>
                     </div>
-                    <div class = "userModal">
-                        <input class = "userNewInput" id = "passwordNew" type="text" name = "passwordNew" required>
-                        <label for="passwordNew">Lugar</label>
+                    <div class = "addModalAccident">
+                        <input class = "modalInput" id = "accdientPlace" type="text" name = "accdientPlace" required>
+                        <label for="accdientPlace">Lugar</label>
                     </div>
-                    <div class = "userModal">
-                        <input class = "userNewInput" id = "name" type="text" name = "name" required>
-                        <label for="name">Descripción</label>
+                    <div class = "addModalAccident">
+                        <input class = "modalInput" id = "accidentCause" type="text" name = "accidentCause" required>
+                        <label for="accidentCause">Causa</label>
                     </div>
-                    <div class = "userModal">
-                        <input class = "userNewInput" id = "lastNameNew" type="text" name = "lastNameNew" required>
-                        <label for="lastNameNew">Causa</label>
+                    <div class = "addModalAccident">
+                        <input class = "modalInput" id = "accidentDescription" type="text" name = "accidentDescription" required>
+                        <label for="accidentDescription">Descripción</label>
                     </div>
-                    <div class = "userModal">
-                        <input class = "userNewInput" id = "telephone" type="text" name = "telephone" required>
-                        <label for="telephone">Lesionados</label>
+                    <div class = "addModalAccident">
+                        <input class = "modalInput" id = "accidentInjured" type="text" name = "accidentInjured" required>
+                        <label for="accidentInjured">Lesionados</label>
                     </div>
-                    <div class = "userModal">
-                        <input class = "userNewInput" id = "emailNew" type="text" name = "emailNew" required>
-                        <label for="emailNew">Uso casco</label>
+                    <div class = "addModalAccident">
+                        <input class = "modalInput" id = "useHelmet" type="text" name = "useHelmet" required>
+                        <label for="useHelmet">Uso casco</label>
                     </div>
-                    <div class = "userModal">
-                        <input class = "userNewInput" id = "emailNew" type="text" name = "emailNew" required>
-                        <label for="emailNew">Nivel de gravedad</label>
+                    <div class = "addModalAccident">
+                        <input class = "modalInput" id = "severityLevel" type="text" name = "severityLevel" required>
+                        <label for="severityLevel">Nivel de gravedad</label>
                     </div>
-                    <div class = "userModal">
-                        <input class = "userNewInput" id = "emailNew" type="text" name = "emailNew">
-                        <label for="emailNew">Imagen de evidencia</label>
+                    <div class = "addModalAccident">
+                        <input class = "modalInput" id = "accidentImg" type="file" name = "accidentImg">
+                        <label for="accidentImg">Imagen de evidencia</label>
                     </div>
-                    <div class = "CrearNew">
-                        <span class = "crearCuentaError">Error al crear la cuenta</span>
-                        <button id = "btnCreateNew" type="submit">Crear cuenta</button>
+                    <div class = "saveAccident">
+                        <span class = "crearCuentaError">Error al guardar los datos</span>
+                        <button id = "btnSave" type="submit">Guardar</button>
                     </div>
                 </form>
             </div>

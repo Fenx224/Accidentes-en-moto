@@ -1,0 +1,59 @@
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.contenidoModal {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: auto;
+    background: rgb(22, 24, 28);
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    height: 70%;
+    color: white;
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+.contenidoModal input[type="text"]{
+    background-color: rgb(22, 24, 28);
+    border: 2px solid rgba(164, 163, 182, 0.088);
+    box-shadow: 5px 5px 0px 0px rgba(164, 163, 182, 0.088);
+    border-radius: 5px;
+    color: white;
+    height: 35px;
+    width: 300px;
+    margin: 2px 0px 2px 0px;
+}
+
+.contenidoModal h2{
+    padding: 5px 10px;
+}
+
+.formularioModal{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalInput{
+    padding: 0px 10px;
+}
+
+.modalInput:focus{
+    border: 2px solid white;
+}
+
+.modalInput:hover{
+    border: 2px solid white;
+}
