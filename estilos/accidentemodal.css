@@ -149,3 +149,13 @@ input[type=date]:valid{
     height: 30px;
     width: 100px;
 }
+
+.btnAgregar:hover{
+    background-color: rgb(45, 125, 210);
+    border: 2px solid rgb(45, 125, 210);
+    cursor: pointer;
+}
+
+.btnAgregar:active{
+    transform: scale(0.95);
+}
