@@ -137,3 +137,15 @@ input[type=date]:valid{
     width: 90%; /* evita que sobresalga */
     margin: 0 auto; /* centrar */
 }
+
+.btnAgregar{
+    
+    text-align: center;
+    color: white;
+    border-radius: 13px;
+    box-shadow: 0 0 0 0;
+    border: 2px solid rgb(0, 123, 255);
+    background-color: rgb(0, 123, 255);
+    height: 30px;
+    width: 100px;
+}
