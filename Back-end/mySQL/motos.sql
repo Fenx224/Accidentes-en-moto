@@ -45,4 +45,13 @@ CREATE TABLE `accidentes`(
     `imagen_evidencia` BLOB,
     PRIMARY KEY (`accidenteID`),
     UNIQUE KEY `accidenteID`(`accidenteID`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB
+
+INSERT INTO cascos (marca, modelo, tipo, certificaciones, precio_aprox, imagen, descripcion, fecha_registro)
+VALUES ("KOV", "KOV Casco Estelar Negro Mate ", "modular", "DOT, ECE", 1253, LOAD_FILE("C:\xampp\htdocs\Accidentes-en-moto\assets\casco_modular.jpg"),
+"LUZ TRASERA
+VISOR HUMO CON TECNOLOGÍA ANTISCRATCH
+ACOLCHADO ERGONÓMICO Y DESPRENDIBLE PARA UNA FÁCIL LIMPIEZA
+TELA INTERNA ANTIALERGÉNICA E HIPOALERGÉNICA
+PINTURA CON EXCELENTE ACABADO EVITA EL DESGASTE DE LOS GRÁFICOS
+DISEÑO AERODINÁMICO TIPO RACING", '2025-12-10');

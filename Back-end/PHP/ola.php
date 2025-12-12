@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include 'C:\xampp\htdocs\Accidentes-en-moto\Back-end\PHP\db.php';
 
 // DEFINICIÓN de la función (debe aceptar la conexión como argumento)
 function Consultar($db_connection) {
