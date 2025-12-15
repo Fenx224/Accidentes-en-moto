@@ -1,3 +1,69 @@
+/* Inicio de los modales*/
+
+/* Inicio de los estilos compatidos para el modal*/
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.contenidoModal {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: auto;
+    background: rgb(22, 24, 28);
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    height: 70%;
+    color: white;
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+.contenidoModal input[type="text"]{
+    background-color: rgb(22, 24, 28);
+    border: 2px solid rgba(164, 163, 182, 0.088);
+    box-shadow: 5px 5px 0px 0px rgba(164, 163, 182, 0.088);
+    border-radius: 5px;
+    color: white;
+    height: 35px;
+    width: 300px;
+    margin: 2px 0px 2px 0px;
+}
+
+.contenidoModal h2{
+    padding: 5px 10px;
+}
+
+.formularioModal{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalInput{
+    padding: 0px 10px;
+}
+
+.modalInput:focus{
+    border: 2px solid white;
+}
+
+.modalInput:hover{
+    border: 2px solid white;
+}
+/* Fin de los estilos compatidos para el modal*/
+
+/* Incio del modal Create*/
+
 .addModalAccident {
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
@@ -66,18 +132,6 @@ input[type=date]:valid{
     padding: 0 5px;
 }
 
-.newUserError {
-    display: none;
-    color: red;
-    font-size: 14px;
-}
-
-.crearCuentaError {
-    display: none;
-    color: red;
-    font-size: 14px;
-}
-
 #cerrar{
     color: white;
     background-color: rgb(22, 24, 28);
@@ -133,9 +187,9 @@ input[type=date]:valid{
 .formularioGrid {
     align-items: center;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-    width: 90%; /* evita que sobresalga */
-    margin: 0 auto; /* centrar */
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin: 0 auto;
 }
 
 .btnAgregar{
@@ -159,3 +213,65 @@ input[type=date]:valid{
 .btnAgregar:active{
     transform: scale(0.95);
 }
+
+/* Fin del modal Create*/
+
+/* Inicio del modal Update*/
+
+.modalUpdate {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.btnUpdate{
+    text-align: center;
+    color: white;
+    border-radius: 13px;
+    box-shadow: 0 0 0 0;
+    border: 2px solid rgb(0, 123, 255);
+    background-color: rgb(0, 123, 255);
+    height: 30px;
+    width: 100px;
+}
+
+.btnUpdate:hover{
+    background-color: rgb(45, 125, 210);
+    border: 2px solid rgb(45, 125, 210);
+    cursor: pointer;
+}
+
+.btnUpdate:active{
+    transform: scale(0.95);
+}
+
+#closeModalUpdate{
+    color: white;
+    background-color: rgb(22, 24, 28);
+    box-shadow: 0 0 0 0;
+    border: 2px solid rgb(22, 24, 28);
+    float: right;
+    user-select: none;
+    font-size: 25px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+#closeModalUpdate:hover{
+    background-color: rgba(128, 128, 128, 0.83);
+    cursor: pointer;
+}
+
+#closeModalUpdate:active{
+    background-color: rgba(128, 128, 128, 0.83);
+    transform: scale(0.95);
+}
+
+/* FIn del modal Update*/
