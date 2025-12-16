@@ -62,7 +62,7 @@
     <div class = "modalUpdate">
         <div class = "contenidoModal">
             <button id="closeModalUpdate">&times;</button>
-            <h2>Agregar accidente</h2>
+            <h2>Modificar accidente</h2>
             <div class = "formularioModal">
                 <form action="" method="post" class = "formularioGrid">
                     <div class = "addModalAccident">
@@ -106,6 +106,36 @@
         </div>
     </div>
     <button class = "btnUpdate">modificar</button>
+
+    <!-- Agregar boton de borrar -->
+    <div id="modalDelete" class="modalDelete">
+    
+        <div class="modal-content-delete">
+            
+            <button id="closeModalDelete" class="close">&times;</button>
+            
+            <h3>Confirmar Eliminación</h3>
+            <p>¿Estás seguro de que deseas eliminar este registro de accidente? Esta acción es irreversible.</p>
+            
+            <form id="formDelete" method="GET" action="../Back-end/PHP/procesar_borrado.php">
+                
+                <input type="hidden" name="id" id="idRegistroBorrar">
+                
+                <button type="submit" class="btnDelete">
+                    Eliminar
+                </button>
+                
+                <button type="button" onclick="document.getElementById('modalDelete').style.display='none'" class="btn btn-modificar" style="background-color: #6c757d;">
+                    Cancelar
+                </button>
+            </form>
+            
+        </div>
+    </div>
+
+    <button class = "btnDelete">borrar</button>
+    
+
     <!--Fin de la ventana modal-->
     <script src="/scripts/script_modal.js"></script>
 </body>
