@@ -28,3 +28,20 @@ if (cerrarModificar) {
         modalUpdate.style.display = "none";
     }
 }
+
+// Conectar eel boton eliminar l java sript
+
+const modalDelete = document.querySelector(".modalDelete");
+const abrirEliminar = document.querySelector(".btnDelete");
+const cerrarEliminar = document.getElementById("closeModalDelete");
+
+if (abrirEliminar) {
+    abrirEliminar.onclick = function() {
+        modalDelete.style.display = "block";
+    }   
+}
+if (cerrarEliminar) {
+    cerrarEliminar.onclick = function() {
+        modalDelete.style.display = "none";
+    }
+}
