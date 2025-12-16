@@ -19,18 +19,16 @@ CREATE TABLE `users` (
     UNIQUE KEY `telephone`(`telephone`)
 ) ENGINE=innoDB;
 
-CREATE TABLE `cascos`(
-	`cascoID` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `cascos` (
+    `id` INT NOT NULL AUTO_INCREMENT,
     `marca` VARCHAR(75) NOT NULL,
     `modelo` VARCHAR(50) NOT NULL,
     `tipo` VARCHAR(30) NOT NULL,
-    `certificaciones` LONGTEXT NOT NULL,
-    `precio_aprox` INT,
-    `imagen` BLOB,
-    `descripcion` LONGTEXT,
-    `fecha_registro` DATE,
-    PRIMARY KEY (`cascoID`),
-    UNIQUE KEY `cascoID`(`cascoID`)
+    `certificacion` VARCHAR(255) NOT NULL, 
+    `precio` DECIMAL(10, 2),             
+    `imagen_url` VARCHAR(255),           
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `id_unique` (`id`)
 ) ENGINE=InnoDB;
 
 CREATE TABLE `accidentes`(
@@ -45,13 +43,9 @@ CREATE TABLE `accidentes`(
     `imagen_evidencia` BLOB,
     PRIMARY KEY (`accidenteID`),
     UNIQUE KEY `accidenteID`(`accidenteID`)
-) ENGINE=InnoDB
+) ENGINE=InnoDB;
 
-INSERT INTO cascos (marca, modelo, tipo, certificaciones, precio_aprox, imagen, descripcion, fecha_registro)
-VALUES ("KOV", "KOV Casco Estelar Negro Mate ", "modular", "DOT, ECE", 1253, LOAD_FILE("C:\xampp\htdocs\Accidentes-en-moto\assets\casco_modular.jpg"),
-"LUZ TRASERA
-VISOR HUMO CON TECNOLOGÍA ANTISCRATCH
-ACOLCHADO ERGONÓMICO Y DESPRENDIBLE PARA UNA FÁCIL LIMPIEZA
-TELA INTERNA ANTIALERGÉNICA E HIPOALERGÉNICA
-PINTURA CON EXCELENTE ACABADO EVITA EL DESGASTE DE LOS GRÁFICOS
-DISEÑO AERODINÁMICO TIPO RACING", '2025-12-10');
+DELETE FROM cascos;
+
+INSERT INTO cascos (marca, modelo, tipo, certificacion, precio, imagen_url)
+VALUES ("KOV", "KOV Casco Estelar Negro Mate ", "modular", "DOT, ECE", 1253,"C:\xampp\htdocs\Accidentes-en-moto\Back-end\PHP\uploads\casco_modular.jpg");

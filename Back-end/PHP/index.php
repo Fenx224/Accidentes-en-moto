@@ -1,3 +1,31 @@
+<?php
+require_once 'C:\xampp\htdocs\Accidentes-en-moto\Back-end\PHP\db.php';
+
+$sql = "SELECT 
+    id, 
+    marca, 
+    modelo, 
+    tipo, 
+    certificacion, 
+    precio, 
+    imagen_url 
+FROM cascos 
+ORDER BY id DESC";
+
+
+$resultado = $conn->query($sql);
+
+$cascos = []; // Inicialización: ¡Esto crea la variable $cascos!
+if ($resultado && $resultado->num_rows > 0) {
+    while($fila = $resultado->fetch_assoc()) {
+        $cascos[] = $fila;
+    }
+}
+
+// 3. Cierre de conexión
+$conn->close();
+?>
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -175,9 +203,6 @@
     <section id="cascos" class="page">
       <div class="d-flex justify-content-between align-items-center mb-3">
         <h3>Tipos de Cascos</h3>
-        <div>
-          <button class="btn btn-primary btn-sm" id="addCascoBtn">Agregar casco</button>
-        </div>
       </div>
       <div>
         <style>
@@ -221,9 +246,10 @@
         }
     </style>
 </head>
+
 <body>
 
-    <h1>🏍️ Tipos Comunes de Cascos de Motocicleta</h1>
+  <h1>🏍️ Tipos Comunes de Cascos de Motocicleta</h1>
 
     <table>
         <thead>
@@ -286,40 +312,50 @@
             
         </tbody>
     </table>
-      </div>
-      <div class="table-responsive">
+    </div>
+  
+    <div class="mb-3">
+    <a href="crear.php" class="btn btn-success">
+        Agregar Nuevo Casco
+    </a>
+    </div>
+
+    <div class="table-responsive">
         <table class="table table-striped table-hover">
-          <thead class="table-light">
-            <tr>
-              <th>#</th>
-              <th>Marca</th>
-              <th>Modelo</th>
-              <th>Tipo</th>
-              <th>Certificación</th>
-              <th>Precio aprox.</th>
-              <th>Imagen</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Marca A</td>
-              <td>Modelo X</td>
-              <td>Integral</td>
-              <td>DOT / ECE</td>
-              <td>$1,200</td>
-              <td><img src="https://via.placeholder.com/60" class="rounded" alt="casco"></td>
-              <td>
-                <button class="btn btn-sm btn-outline-secondary">Ver</button>
-                <button class="btn btn-sm btn-outline-primary">Editar</button>
-                <button class="btn btn-sm btn-outline-danger">Eliminar</button>
-              </td>
-            </tr>
-            <!-- Filas de ejemplo -->
-          </tbody>
-        </table>
-      </div>
+          </table>
+    </div>
+
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead class="table-light">
+            </thead>
+        <tbody>
+            <?php foreach ($cascos as $casco): ?>
+                <tr>
+                    <td><?php echo $casco['id']; ?></td>
+                    <td><?php echo $casco['marca']; ?></td>
+                    <td><?php echo $casco['modelo']; ?></td>
+                    <td><?php echo $casco['tipo']; ?></td>
+                    <td><?php echo $casco['certificacion']; ?></td>
+                    <td>$<?php echo number_format($casco['precio'], 2); ?></td>
+                    <td><img src="<?php echo $casco['imagen_url']; ?>" class="rounded" alt="casco_<?php echo $casco['id']; ?>" style="width: 60px; height: auto;"></td>
+                    <td>
+                        <a href="ver.php?id=<?php echo $casco['id']; ?>" class="btn btn-sm btn-outline-secondary">Ver</a>
+                        <a href="editar.php?id=<?php echo $casco['id']; ?>" class="btn btn-sm btn-outline-primary">Editar</a>
+                        <form method="POST" action="eliminar.php" style="display:inline;">
+                            <input type="hidden" name="id" value="<?php echo $casco['id']; ?>">
+                            <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('¿Estás seguro de que quieres eliminar este casco?');">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+            <?php if (empty($cascos)): ?>
+                <tr><td colspan="8" class="text-center">No hay cascos registrados.</td></tr>
+            <?php endif; ?>
+        </tbody>
+    </table>
+</div>
+      
 
       <!-- Modal/Offcanvas para alta/editar (UI solo) -->
       <div class="offcanvas offcanvas-end" tabindex="-1" id="cascoEditor">
